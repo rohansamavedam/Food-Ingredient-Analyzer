@@ -80,12 +80,13 @@ class App extends Component{
       <div className="App">
         <h1>Allergic Ingredient Analyzer</h1>
         <ImageForm onInputChange = { this.onInputChange }  onButtonSubmit = { this.onButtonSubmit } onClearSubmit = { this.onClearSubmit } />
-          <br/>
-        <div className="container">
+
+
+        <br/>
+
+
+        <div className="container pa4 br2 shadow-2 w-100 center baseBack">
           <div className="row">
-            <div className="col center tc">
-              <ImageDisplay imageUrl = {imageUrl}/>
-            </div>
             <div className="col tc">
               <ProgressBar percentage={(value*100).toFixed(2)} color={color}/>
               <br/>
@@ -94,8 +95,15 @@ class App extends Component{
           </div>
         </div>
 
-        <div className="container center tc">
-          <ContentDisplay contents = { contents } />
+
+        <br/>
+
+
+        <div className="container  pa4 br2 shadow-2 w-100  baseBack">
+          <div className="row">
+            <div className="col"><ImageDisplay imageUrl = {imageUrl}/></div>
+            <div className="col"><ContentDisplay contents = { contents } /></div>
+          </div>
         </div>
         
 
